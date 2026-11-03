@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-gold-300: #E8C766;
+  --color-gold-400: #DEB843;
+  --color-gold-500: #C9A227;
+  --color-gold-600: #A88318;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0A0A0A;
+  color: #F3F4F6;
+  overflow-x: hidden;
+}
+
+/* Custom Gold Accent Gradient Utility */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F5D77F 0%, #C9A227 50%, #E8C766 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #E8C766 0%, #C9A227 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(201, 162, 39, 0.25);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px -5px rgba(201, 162, 39, 0.25);
+}
+
+/* Smooth Touch Targets */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
